@@ -9,6 +9,7 @@ Console.WriteLine(number);
 
 int firstDigit = (number / 100) % 10;
 int lastDigit = number % 10;
+int result = firstDigit*10 + lastDigit;
 
 
-Console.WriteLine($"{number} -> {firstDigit}{lastDigit}");
+Console.WriteLine($"{number} -> {result}");
