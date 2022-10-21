@@ -22,4 +22,4 @@ double Length = Math.Sqrt(Math.Pow((x2 - x1), 2) +
                 Math.Pow((y2 - y1), 2) +
                 Math.Pow((z2 - z1), 2));
 
-Console.WriteLine($"Длина отрезка  {Length:f2}");
+Console.WriteLine($"Расстояние между точками: {Length:f2}");
