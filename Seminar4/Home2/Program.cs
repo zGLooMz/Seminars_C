@@ -16,12 +16,12 @@ int NumberSum(int number)
     int sum = 0;
     while (number > 0)
     {
-      sum = sum + number % 10;
-      number = number / 10;
+        sum = sum + number % 10;
+        number = number / 10;
     }
-   return sum;
+    return sum;
 }
 
-int number = Prompt("Введите число: ");
-int sumNumber = NumberSum(number);
+int numbers = Prompt("Введите число: ");
+int sumNumber = NumberSum(numbers);
 Console.WriteLine($"Сумма цифр в числе: {sumNumber}");
