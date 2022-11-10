@@ -26,17 +26,4 @@ int numberB = Prompt("Введите число B");
 
 int exponent = Exponent(numberA, numberB);
 
-Console.WriteLine($"А в степени В равно {exponent}");
-
-// Решение через Math.Pow
-// 
-// double Exponent(int numberA, int numberB)
-// {
-//     double result = Math.Pow(numberA, numberB);
-//     return result;
-// }
-
-// int numberA = Prompt("Введите число A");
-// int numberB = Prompt("Введите число B");
-// double exponent = Exponent(numberA, numberB);
-// Console.WriteLine($"А в степени В равно {exponent}");
+Console.WriteLine($"{numberA} в степени {numberB} равно {exponent}");
