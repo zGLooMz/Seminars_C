@@ -30,15 +30,12 @@ void PrintArray(int[] array)
 
 }
 
-int SumNegativePos(int[] array)
+int SumOddPos(int[] array)
 {
     int sumElements = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i += 2)
     {
-        if (i % 2 != 1)
-        {
-            sumElements = sumElements + array[i];
-        }
+        sumElements = sumElements + array[i];
     }
     return sumElements;
 }
@@ -48,5 +45,5 @@ int max = Prompt("Введите максимальный порог случа�
 int[] array = CreateArray(len, min, max);
 PrintArray(array);
 Console.WriteLine();
-int quantity = SumNegativePos(array);
+int quantity = SumOddPos(array);
 Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях: {quantity}");
