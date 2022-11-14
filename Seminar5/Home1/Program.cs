@@ -29,7 +29,7 @@ void PrintArray(int[] array)
 
 }
 
-int QuantityPositive(int[] array)
+int QuantityEven(int[] array)
 {
     int quantity = 0;
     for (int i = 0; i < array.Length; i++)
@@ -47,5 +47,5 @@ int max = 1000;
 int[] array = CreateArray(len, min, max);
 PrintArray(array);
 Console.WriteLine();
-int quantity = QuantityPositive(array);
+int quantity = QuantityEven(array);
 Console.WriteLine($"Количество чётных чисел в массиве: {quantity}");
