@@ -22,7 +22,7 @@ int[,] CreateMatrix(int m, int n)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1,10);
+            array[i, j] = new Random().Next(1, 10);
         }
     }
     return array;
@@ -40,19 +40,13 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void FindElement (int[,] array, int posI, int posJ)
+void FindElement(int[,] array, int posI, int posJ)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    if (posI < array.GetLength(0)      
+     && posJ < array.GetLength(1))
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == posI && j == posJ)
-            {
-                Console.WriteLine($"Позиции [{i}, {j}] соответствует число {array[i, j]}");
-                return;
-            }
-            
-        }
+        Console.WriteLine($"Позиции [{posI}, {posJ}] соответствует число {array[posI, posJ]}");
+        return;
     }
     Console.WriteLine($"Такого элемента нет в массиве");
 }
