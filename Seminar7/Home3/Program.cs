@@ -38,19 +38,26 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void AverageColumns(int[,] matr)
+double[] AverageColumns(int[,] matr)
 {
+    double[] average = new double[matr.GetLength(1)];
     for (int j = 0; j < matr.GetLength(1); j++)
     {
-        double average = 0;
         for (int i = 0; i < matr.GetLength(0); i++)
         {
-            average += matr[i, j];
+            average[j] += matr[i, j];
         }
-        average = average / matr.GetLength(0);
-        Console.Write($"{average}; ");
+        average[j] = average[j] / matr.GetLength(0);
+        
     }
+    return average;
 }
+void PrintAverage (double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]}; ");
+}
+
 int m = PromptInt("Введите количество строк: ");
 int n = PromptInt("Введите количество столбцов: ");
 Console.WriteLine();
@@ -58,4 +65,4 @@ int[,] matrix = CreateMatrix(m, n);
 PrintMatrix(matrix);
 Console.WriteLine();
 Console.Write($"Среднее арифметическое каждого столбца: "); 
-AverageColumns(matrix);
+PrintAverage(AverageColumns(matrix));
